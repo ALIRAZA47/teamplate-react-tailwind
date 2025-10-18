@@ -3,6 +3,7 @@ export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:30
 export const API_ENDPOINTS = {
   AUTH: {
     LOGIN: '/auth/login',
+    SIGNUP: '/auth/signup',
     LOGOUT: '/auth/logout',
     REFRESH: '/auth/refresh',
     PROFILE: '/auth/profile',
@@ -10,6 +11,7 @@ export const API_ENDPOINTS = {
   USERS: '/users',
   DASHBOARD: '/dashboard',
   ANALYTICS: '/analytics',
+  PRODUCTS: '/products',
 } as const
 
 export const API_TIMEOUT = 10000
