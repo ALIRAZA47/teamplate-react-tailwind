@@ -17,8 +17,14 @@ const UsersPage = lazy(() =>
 const AnalyticsPage = lazy(() =>
   import('./pages/AnalyticsPage').then((m) => ({ default: m.AnalyticsPage }))
 )
-const SettingsPage = lazy(() =>
-  import('./pages/SettingsPage').then((m) => ({ default: m.SettingsPage }))
+const ProfilePage = lazy(() =>
+  import('./pages/ProfilePage').then((m) => ({ default: m.ProfilePage }))
+)
+const ComponentsPage = lazy(() =>
+  import('./pages/ComponentsPage').then((m) => ({ default: m.ComponentsPage }))
+)
+const ChatPage = lazy(() =>
+  import('./pages/ChatPage').then((m) => ({ default: m.ChatPage }))
 )
 const LoginPage = lazy(() =>
   import('./pages/LoginPage').then((m) => ({ default: m.LoginPage }))
@@ -49,7 +55,9 @@ function App() {
             <Route path={ROUTES.DASHBOARD} element={<DashboardPage />} />
             <Route path={ROUTES.USERS} element={<UsersPage />} />
             <Route path={ROUTES.ANALYTICS} element={<AnalyticsPage />} />
-            <Route path={ROUTES.SETTINGS} element={<SettingsPage />} />
+            <Route path={ROUTES.CHAT} element={<ChatPage />} />
+            <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
+            <Route path={ROUTES.COMPONENTS} element={<ComponentsPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
